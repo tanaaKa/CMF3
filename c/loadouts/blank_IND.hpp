@@ -159,9 +159,10 @@ class rifleman_03: Fic_Soldier_Carbine {// CLS
 class sm: Fic_Soldier_Carbine {// Medic
   magazines[] = {CARBINE_MAG,MEDIC_GRENADES};
   backpackItems[] = {MEDIC_MEDICAL};
-  items[] += {RADIO_MR,RADIO_LR};
+  items[] += {RADIO_MR};
 };
 class plm: sm {// Platoon Medic
+  items[] += {RADIO_LR};
 };
 class cm: plm {// Company Medic
 };
