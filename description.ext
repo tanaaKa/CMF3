@@ -4,10 +4,16 @@ class MissionSQM
 	#include "mission.sqm"
 };
 
+// Mission-specific functions
+class CfgFunctions 
+{ 
+	#include "CfgFunctions.hpp"
+};
+
 // Misc settings
 disableChannels[] = {0,1,2,4,5,6};
-cmfDate = "15JAN2023";
-cmfVers = "CMF2 1.2.2";
+cmfDate = "30JUL2023";
+cmfVers = "CMF3 1.0.0";
 statTracking = true;
 
 // Includes for gear
