@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4022.9778,84.860741,4020.4229};
+		pos[]={4022.5442,84.860741,4073.2917};
 		dir[]={-0.0060905982,-0.67939842,0.7338264};
 		up[]={-0.0056408863,0.73360342,0.67953378};
 		aside[]={1.0000309,4.607391e-007,0.0083010811};
@@ -1342,7 +1342,7 @@ class Mission
 				position[]={4083.927,5,4149.9771};
 			};
 			title="OPTIONAL: BLU vehicle service pad";
-			description="For this to function, you must uncomment:" \n "" \n "initServer.sqf -> Line 13";
+			description="Enabled by default. If you delete this, you should comment out line 4 in initServer.sqf";
 			id=39;
 		};
 		class Item31
@@ -1353,7 +1353,7 @@ class Mission
 				position[]={3948.834,5,4149.9541};
 			};
 			title="OPTIONAL: OPF vehicle service pad";
-			description="For this to function, you must uncomment:" \n "" \n "initServer.sqf -> Line 13";
+			description="Enabled by default. If you delete this, you should comment out line 4 in initServer.sqf";
 			id=40;
 		};
 		class Item32
