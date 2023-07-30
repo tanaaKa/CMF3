@@ -142,6 +142,9 @@ class fac: coy {// FAC
 
 
 //Medics
+class rifleman_03: Fic_Soldier_Carbine {// CLS
+  backpackItems[] = {CLS_MEDICAL};
+};
 class sm: Fic_Soldier_Carbine {// Medic
   magazines[] = {CARBINE_MAG,MEDIC_GRENADES};
   backpackItems[] = {MEDIC_MEDICAL};
