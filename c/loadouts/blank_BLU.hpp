@@ -18,10 +18,10 @@
 #define HAT_TRI_LO 
 #define HAT_MAG 
 // SAM
-#define SAM "CUP_launch_FIM92Stinger"
-#define SAM_MAG 
-#define SAM_MAG2 
-// Sniper Rifle
+#define SAM "rhs_weap_fim92"
+#define SAM_MAG "rhs_fim92_mag:1"
+#define SAM_MAG2 "rhs_fim92_mag:2"
+// Sniper Rifle 
 #define SNIPER "srifle_DMR_06_olive_F"
 #define SNIPER_MAG "20Rnd_762x51_Mag:10"
 #define SNIPER_ATTACHMENTS "optic_LRPS"
@@ -33,8 +33,8 @@
 #define SMG CARBINE
 #define SMG_MAG CARBINE_MAG
 // Pistol
-#define PISTOL "CUP_hgun_Colt1911"
-#define PISTOL_MAG "CUP_7Rnd_45ACP_1911:3"
+#define PISTOL "rhsusf_weap_glock17g4"
+#define PISTOL_MAG "rhsusf_mag_17Rnd_9x19_JHP:3"
 // Grenades
 #define LEADER_GRENADES BASE_FRAG,LEADER_SMOKES,SIDE_CHEM_LIGHT
 // Gear
@@ -42,8 +42,7 @@
 #define LEADER_TOOLS BASE_LEADER_TOOLS,SIDE_KEY
 #define LINKED BASE_LINKED
 #define LEADER_LINKED BASE_LEADER_LINKED
-#define CARRYALL "B_Carryall_mcamo"
-#define GOG
+#define CARRYALL "B_Battle_Belt_XL_F"
 
 // Specialized Resupply Vehicle Loadouts
 // Ammo Truck
@@ -295,7 +294,7 @@ class spotter: Fic_Spotter {// Spotter
 class sniper: spotter {// Sniper
   weapons[] = {SNIPER};
   magazines[] = {SNIPER_MAG,BASE_GRENADES};
-  items[] = {TOOLS,"ACE_RangeCard"};
+  items[] = {RADIO_SR,TOOLS,"ACE_RangeCard"};
   linkedItems[] = {LINKED};
   attachments[] = {SNIPER_ATTACHMENTS};
 };

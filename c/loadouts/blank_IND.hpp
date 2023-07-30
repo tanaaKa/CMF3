@@ -4,43 +4,6 @@
 
 // ------------------- PASTE BELOW THIS LINE
 
-// Camo set
-#define CAMO_UNIFORM "milgp_u_fleece_rgr_g3_field_pants_mc"
-#define CAMO_VEST "milgp_v_jpc_Grenadier_belt_mc", "milgp_v_jpc_assaulter_belt_mc", "milgp_v_jpc_hgunner_belt_mc", "milgp_v_jpc_marksman_belt_mc", "milgp_v_jpc_medic_belt_mc", "milgp_v_jpc_teamleader_belt_mc", "milgp_v_marciras_marksman_belt_mc", "milgp_v_marciras_hgunner_belt_mc", "milgp_v_marciras_grenadier_belt_mc", "milgp_v_marciras_medic_belt_mc"
-#define CAMO_BACKPACK "B_Battle_Belt_XL_F"
-#define CAMO_HEADGEAR "milgp_h_airframe_01_MC", "milgp_h_airframe_01_goggles_MC", "milgp_h_airframe_02_MC", "milgp_h_airframe_02_goggles_MC", "milgp_h_airframe_03_goggles_MC", "milgp_h_airframe_03_MC", "milgp_h_airframe_04_goggles_MC", "milgp_h_airframe_04_MC", "milgp_h_airframe_05_goggles_MC", "milgp_h_airframe_05_MC", "milgp_h_airframe_06_goggles_MC"
-// Rifle
-#define RIFLE "rhs_weap_mk18_KAC"
-#define RIFLE_MAG "rhs_mag_30Rnd_556x45_M855A1_PMAG:10"
-#define RIFLE_ATTACHMENTS "rhsusf_acc_nt4_black", "rhsusf_acc_anpeq15side_bk", "rhsusf_acc_g33_xps3", "rhsusf_acc_grip2"
-#define AR_ATTACHMENTS RIFLE_ATTACHMENTS, 
-#define ALT_OPTICS "rhsusf_acc_acog3","optic_Aco","CUP_optic_CompM2_Black","CUP_optic_TrijiconRx01_black","CUP_optic_MRad",STANAG_OPTICS,WARSAW_OPTICS
-// GL Rifle
-#define GLRIFLE "rhs_weap_mk18_m320"
-#define GLRIFLE_MAG "rhs_mag_30Rnd_556x45_M855A1_PMAG:10"
-#define GLRIFLE_MAG_FLARE "UGL_FlareYellow_F:4"
-#define GLRIFLE_MAG_SMOKE "1Rnd_Smoke_Grenade_shell:6","1Rnd_SmokeRed_Grenade_shell:4","1Rnd_SmokeOrange_Grenade_shell:4",GLRIFLE_MAG_FLARE
-#define GLRIFLE_MAG_HE "1Rnd_HE_Grenade_shell:4"
-// Carbine
-#define CARBINE "rhs_weap_mk18_KAC"
-#define CARBINE_MAG "rhs_mag_30Rnd_556x45_M855A1_PMAG:10"
-// AR
-#define AR "CUP_lmg_Mk48_tan"
-#define AR_MAG "CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M:5"
-// AT
-#define AT "rhs_weap_M136_hedp"
-#define AT_MAG 
-// MMG
-#define MMG ""
-#define MMG_MAG 
-#define MMG_ATT ""
-// MAT
-#define MAT "rhs_weap_maaws"
-#define MAT_MAG "rhs_mag_maaws_HEDP:3"
-#define MAT_MAG2 
-#define MAT_OPTIC "rhs_optic_maaws"
-// Facewear
-#define GOG "milgp_f_face_shield_tactical_shemagh_MC", "milgp_f_face_shield_tactical_MC", "milgp_f_face_shield_shades_MC", "milgp_f_face_shield_goggles_shemagh_MC", "milgp_f_face_shield_goggles_MC", "milgp_f_face_shield_MC", "rhsusf_shemagh_tan", "rhsusf_shemagh_gogg_grn", "rhsusf_shemagh2_od", "UK3CB_G_Tactical_Black_Shemagh_Green_Gloves_Green", "UK3CB_G_Tactical_Black_Shemagh_White_Gloves_Black", "UK3CB_G_Tactical_Black_Shemagh_Green_Gloves_Tan", "UK3CB_G_Tactical_Clear_Shemagh_White_Gloves_Tan"
 
 // -------------------- PASTE ABOVE THIS LINE
 //HMG
@@ -54,9 +17,9 @@
 #define HAT_TRI_LO 
 #define HAT_MAG 
 // SAM
-#define SAM "CUP_launch_FIM92Stinger"
-#define SAM_MAG 
-#define SAM_MAG2 
+#define SAM "rhs_weap_igla"
+#define SAM_MAG "rhs_mag_9k38_rocket:1"
+#define SAM_MAG2 "rhs_mag_9k38_rocket:2"
 // Sniper Rifle
 #define SNIPER "srifle_DMR_06_olive_F"
 #define SNIPER_MAG "20Rnd_762x51_Mag:10"
@@ -69,8 +32,8 @@
 #define SMG CARBINE
 #define SMG_MAG CARBINE_MAG
 // Pistol
-#define PISTOL "CUP_hgun_Colt1911"
-#define PISTOL_MAG "CUP_7Rnd_45ACP_1911:3"
+#define PISTOL "rhsusf_weap_m1911a1"
+#define PISTOL_MAG "rhsusf_mag_7x45acp_MHP:3"
 // Grenades
 #define LEADER_GRENADES BASE_FRAG,LEADER_SMOKES,SIDE_CHEM_LIGHT
 // Gear
@@ -78,8 +41,7 @@
 #define LEADER_TOOLS BASE_LEADER_TOOLS,SIDE_KEY
 #define LINKED BASE_LINKED
 #define LEADER_LINKED BASE_LEADER_LINKED
-#define CARRYALL "B_Carryall_mcamo"
-#define GOG
+#define CARRYALL "B_Battle_Belt_XL_F"
 
 // Specialized Resupply Vehicle Loadouts
 // Ammo Truck
@@ -331,7 +293,7 @@ class spotter: Fic_Spotter {// Spotter
 class sniper: spotter {// Sniper
   weapons[] = {SNIPER};
   magazines[] = {SNIPER_MAG,BASE_GRENADES};
-  items[] = {TOOLS,"ACE_RangeCard"};
+  items[] = {RADIO_SR,TOOLS,"ACE_RangeCard"};
   linkedItems[] = {LINKED};
   attachments[] = {SNIPER_ATTACHMENTS};
 };
