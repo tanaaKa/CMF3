@@ -8,3 +8,5 @@ The Coalition Mission Framework (CMF) is a mission-maker facing framework built 
 
 # The Community
 [![COALITION DISCORD](https://img.shields.io/badge/COALITION_Discord-blue)](https://discord.gg/armacoalition)
+
+![Discord Banner 1](https://discordapp.com/api/guilds/237991125523103747/widget.png?style=banner1)
