@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4022.5442,84.860741,4073.2917};
-		dir[]={-0.0060905982,-0.67939842,0.7338264};
-		up[]={-0.0056408863,0.73360342,0.67953378};
-		aside[]={1.0000309,4.607391e-007,0.0083010811};
+		pos[]={4046.3428,34.720722,4067.2258};
+		dir[]={-0.0093299616,-0.72768772,0.68585056};
+		up[]={-0.009898155,0.68590778,0.72762167};
+		aside[]={0.99990952,-1.3322278e-008,0.013602388};
 	};
 };
 binarizationWanted=0;
@@ -231,6 +231,19 @@ class CustomAttributes
 		};
 		class Attribute2
 		{
+			property="potato_missiontesting_forwardDeploy";
+			expression="_this setVariable ['potato_missiontesting_forwardDeploy',_value];";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=0;
+				};
+			};
+		};
+		class Attribute3
+		{
 			property="potato_missiontesting_maxViewDistance";
 			expression="false";
 			class Value
@@ -239,19 +252,6 @@ class CustomAttributes
 				{
 					singleType="STRING";
 					value="-1";
-				};
-			};
-		};
-		class Attribute3
-		{
-			property="potato_missiontesting_SquadInOneGroup";
-			expression="_this setVariable ['potato_missiontesting_SquadInOneGroup',_value];";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
 				};
 			};
 		};
@@ -270,6 +270,19 @@ class CustomAttributes
 		};
 		class Attribute5
 		{
+			property="potato_missiontesting_SquadInOneGroup";
+			expression="_this setVariable ['potato_missiontesting_SquadInOneGroup',_value];";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		class Attribute6
+		{
 			property="potato_missiontesting_SquadSize";
 			expression="false";
 			class Value
@@ -281,7 +294,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute6
+		class Attribute7
 		{
 			property="potato_missiontesting_medSystem";
 			expression="_this setVariable ['potato_missiontesting_medSystem',_value];";
@@ -294,7 +307,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute7
+		class Attribute8
 		{
 			property="potato_missiontesting_miniArsenalType";
 			expression="_this setVariable ['potato_missiontesting_miniArsenalType',_value];";
@@ -307,7 +320,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute8
+		class Attribute9
 		{
 			property="potato_missiontesting_missionType";
 			expression="false";
@@ -320,7 +333,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute9
+		class Attribute10
 		{
 			property="potato_missiontesting_FHVehicle";
 			expression="false";
@@ -333,7 +346,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute10
+		class Attribute11
 		{
 			property="potato_missiontesting_Team1Size";
 			expression="false";
@@ -346,7 +359,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute11
+		class Attribute12
 		{
 			property="potato_missiontesting_FHBuilding";
 			expression="false";
@@ -359,7 +372,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=12;
+		nAttributes=13;
 	};
 	class Category1
 	{
