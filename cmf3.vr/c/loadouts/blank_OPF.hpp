@@ -315,7 +315,7 @@ class stl: Fic_Spotter {// Scout Team Lead
   linkedItems[] += {LEADER_LINKED};
   attachments[] = {SPOTTER_ATTACHMENTS};
 };
-class sniper: spotter {// Sniper
+class sniper: Fic_spotter {// Sniper
   weapons[] = {SNIPER};
   magazines[] = {SNIPER_MAG,BASE_GRENADES};
   items[] = {RADIO_SR,TOOLS,"ACE_RangeCard"};

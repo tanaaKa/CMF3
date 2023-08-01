@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=3335;
+		nextID=4104;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4046.3428,34.720722,4067.2258};
-		dir[]={-0.0093299616,-0.72768772,0.68585056};
-		up[]={-0.009898155,0.68590778,0.72762167};
-		aside[]={0.99990952,-1.3322278e-008,0.013602388};
+		pos[]={4014.0327,62.497311,4035.2256};
+		dir[]={-0.0042088842,-0.6444881,0.76463032};
+		up[]={-0.0035476694,0.76459986,0.64449471};
+		aside[]={1.0000052,2.0267362e-007,0.0055053253};
 	};
 };
 binarizationWanted=0;
@@ -45,8 +45,8 @@ addons[]=
 	"A3_Soft_F_Gamma_Truck_02",
 	"CUP_CAMisc_E_WF",
 	"A3_Misc_F_Helpers",
-	"potato_units",
-	"ace_rearm"
+	"ace_rearm",
+	"potato_units"
 };
 class AddonsMetaData
 {
@@ -166,16 +166,16 @@ class AddonsMetaData
 		};
 		class Item17
 		{
-			className="potato_units";
-			name="potato_units";
-			author="Potato";
-		};
-		class Item18
-		{
 			className="ace_rearm";
 			name="ACE3 - Rearm";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
+		};
+		class Item18
+		{
+			className="potato_units";
+			name="potato_units";
+			author="Potato";
 		};
 	};
 };
@@ -218,7 +218,20 @@ class CustomAttributes
 		};
 		class Attribute1
 		{
-			property="potato_missiontesting_missionTimeLength";
+			property="potato_missiontesting_SquadInOneGroup";
+			expression="_this setVariable ['potato_missiontesting_SquadInOneGroup',_value];";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="potato_missiontesting_maxViewDistance";
 			expression="false";
 			class Value
 			{
@@ -229,22 +242,9 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute2
-		{
-			property="potato_missiontesting_forwardDeploy";
-			expression="_this setVariable ['potato_missiontesting_forwardDeploy',_value];";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=0;
-				};
-			};
-		};
 		class Attribute3
 		{
-			property="potato_missiontesting_maxViewDistance";
+			property="potato_missiontesting_missionTimeLength";
 			expression="false";
 			class Value
 			{
@@ -270,14 +270,14 @@ class CustomAttributes
 		};
 		class Attribute5
 		{
-			property="potato_missiontesting_SquadInOneGroup";
-			expression="_this setVariable ['potato_missiontesting_SquadInOneGroup',_value];";
+			property="potato_missiontesting_forwardDeploy";
+			expression="_this setVariable ['potato_missiontesting_forwardDeploy',_value];";
 			class Value
 			{
 				class data
 				{
 					singleType="BOOL";
-					value=1;
+					value=0;
 				};
 			};
 		};
@@ -522,7 +522,177 @@ class CustomAttributes
 		};
 		nAttributes=11;
 	};
-	class Category3
+	class Category2
+	{
+		name="potato_radios_configureAcre";
+		class Attribute0
+		{
+			property="potato_radios_acreGlobalConfig";
+			expression="[nil, _value] call potato_radios_fnc_acreGlobalAttributeLoad";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="true,Negotiations,9,false,false";
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="potato_radios_acreSideConfig";
+			expression="[nil, _value] call potato_radios_fnc_acreSideAttributeLoad";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=17;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="false,false,false,false,false,false,false,false";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item4
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item5
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item6
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item7
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item8
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item9
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item10
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item11
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item12
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item13
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item14
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item15
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+						class Item16
+						{
+							class data
+							{
+								nil=1;
+								singleType="STRING";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=2;
+	};
+	class Category4
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -551,7 +721,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category4
+	class Category5
 	{
 		name="Scenario";
 		class Attribute0
@@ -706,7 +876,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=186;
+		items=187;
 		class Item0
 		{
 			dataType="Logic";
@@ -1248,7 +1418,7 @@ class Mission
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={3984.0088,5,4132.1514};
+				position[]={3983.9988,5,4133.9761};
 			};
 			title="OPFOR Company Template";
 			id=25;
@@ -3243,6 +3413,58 @@ class Mission
 		};
 		class Item134
 		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={3998.1196,5,4156.2046};
+			};
+			title="OPTIONAL: OPFOR Logi Vehicle";
+			description="This vehicle will be populated with gearscript-specific items. Update the vehicle class inside your gearscript to match whatever the classname of this vehicle is.";
+			id=3326;
+		};
+		class Item135
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3998.1799,7.3817043,4150.6294};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3328;
+			type="O_Truck_02_Ammo_F";
+		};
+		class Item136
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4034.02,5,4155.9482};
+			};
+			title="OPTIONAL: BLUFOR Logi Vehicle";
+			description="This vehicle will be populated with gearscript-specific items. Update the vehicle class inside your gearscript to match whatever the classname of this vehicle is.";
+			id=3330;
+		};
+		class Item137
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4034.084,6.9255862,4149.8071};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3332;
+			type="B_Truck_01_ammo_F";
+		};
+		class Item138
+		{
 			dataType="Group";
 			side="West";
 			class Entities
@@ -3264,7 +3486,7 @@ class Mission
 						description="Commander@COMPANY";
 						isPlayable=1;
 					};
-					id=3041;
+					id=3818;
 					type="potato_w_coy";
 					class CustomAttributes
 					{
@@ -3300,7 +3522,7 @@ class Mission
 						description="First Sergeant";
 						isPlayable=1;
 					};
-					id=3042;
+					id=3819;
 					type="potato_w_xo";
 					class CustomAttributes
 					{
@@ -3335,7 +3557,7 @@ class Mission
 						description="UAV Operator";
 						isPlayable=1;
 					};
-					id=3043;
+					id=3820;
 					type="potato_w_uav";
 					class CustomAttributes
 					{
@@ -3359,7 +3581,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3040;
+			id=3817;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3378,7 +3600,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item135
+		class Item139
 		{
 			dataType="Group";
 			side="West";
@@ -3400,7 +3622,7 @@ class Mission
 						description="Medical Officer@MEDICAL";
 						isPlayable=1;
 					};
-					id=3045;
+					id=3822;
 					type="potato_w_plm";
 					class CustomAttributes
 					{
@@ -3449,7 +3671,7 @@ class Mission
 						description="Medic";
 						isPlayable=1;
 					};
-					id=3046;
+					id=3823;
 					type="potato_w_sm";
 					class CustomAttributes
 					{
@@ -3498,7 +3720,7 @@ class Mission
 						description="Medic";
 						isPlayable=1;
 					};
-					id=3047;
+					id=3824;
 					type="potato_w_sm";
 					class CustomAttributes
 					{
@@ -3547,7 +3769,7 @@ class Mission
 						description="Medic";
 						isPlayable=1;
 					};
-					id=3048;
+					id=3825;
 					type="potato_w_sm";
 					class CustomAttributes
 					{
@@ -3584,7 +3806,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3044;
+			id=3821;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3603,7 +3825,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item136
+		class Item140
 		{
 			dataType="Group";
 			side="West";
@@ -3624,7 +3846,7 @@ class Mission
 						description="Team Leader@ENGINEER";
 						isPlayable=1;
 					};
-					id=3050;
+					id=3827;
 					type="potato_w_engl";
 				};
 				class Item1
@@ -3641,7 +3863,7 @@ class Mission
 						description="Engineer";
 						isPlayable=1;
 					};
-					id=3051;
+					id=3828;
 					type="potato_w_eng";
 				};
 				class Item2
@@ -3658,7 +3880,7 @@ class Mission
 						description="Engineer";
 						isPlayable=1;
 					};
-					id=3052;
+					id=3829;
 					type="potato_w_eng";
 				};
 				class Item3
@@ -3675,14 +3897,14 @@ class Mission
 						description="Engineer";
 						isPlayable=1;
 					};
-					id=3053;
+					id=3830;
 					type="potato_w_eng";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3049;
+			id=3826;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3714,7 +3936,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item137
+		class Item141
 		{
 			dataType="Group";
 			side="West";
@@ -3736,7 +3958,7 @@ class Mission
 						description="Team Leader@RECON";
 						isPlayable=1;
 					};
-					id=3055;
+					id=3832;
 					type="potato_w_stl";
 				};
 				class Item1
@@ -3753,7 +3975,7 @@ class Mission
 						description="Sniper";
 						isPlayable=1;
 					};
-					id=3056;
+					id=3833;
 					type="potato_w_sniper";
 				};
 				class Item2
@@ -3770,7 +3992,7 @@ class Mission
 						description="Scout";
 						isPlayable=1;
 					};
-					id=3057;
+					id=3834;
 					type="potato_w_spotter";
 				};
 				class Item3
@@ -3787,14 +4009,14 @@ class Mission
 						description="Scout";
 						isPlayable=1;
 					};
-					id=3058;
+					id=3835;
 					type="potato_w_spotter";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3054;
+			id=3831;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3826,7 +4048,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item138
+		class Item142
 		{
 			dataType="Group";
 			side="West";
@@ -3848,7 +4070,7 @@ class Mission
 						description="Battery Commander@ARTILLERY";
 						isPlayable=1;
 					};
-					id=3060;
+					id=3837;
 					type="potato_w_artl";
 				};
 				class Item1
@@ -3865,7 +4087,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3061;
+					id=3838;
 					type="potato_w_artg";
 				};
 				class Item2
@@ -3882,7 +4104,7 @@ class Mission
 						description="Assistant";
 						isPlayable=1;
 					};
-					id=3062;
+					id=3839;
 					type="potato_w_artg";
 				};
 				class Item3
@@ -3899,7 +4121,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3063;
+					id=3840;
 					type="potato_w_artg";
 				};
 				class Item4
@@ -3916,7 +4138,7 @@ class Mission
 						description="Assistant";
 						isPlayable=1;
 					};
-					id=3064;
+					id=3841;
 					type="potato_w_artg";
 				};
 				class Item5
@@ -3933,7 +4155,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3065;
+					id=3842;
 					type="potato_w_artg";
 				};
 				class Item6
@@ -3950,14 +4172,14 @@ class Mission
 						description="Assistant";
 						isPlayable=1;
 					};
-					id=3066;
+					id=3843;
 					type="potato_w_artg";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3059;
+			id=3836;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3989,7 +4211,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item139
+		class Item143
 		{
 			dataType="Group";
 			side="West";
@@ -4011,7 +4233,7 @@ class Mission
 						description="Team Leader@MORTAR";
 						isPlayable=1;
 					};
-					id=3068;
+					id=3845;
 					type="potato_w_mtrl";
 				};
 				class Item1
@@ -4028,7 +4250,7 @@ class Mission
 						description="Gunner (Tube)";
 						isPlayable=1;
 					};
-					id=3069;
+					id=3846;
 					type="potato_w_mtrg";
 				};
 				class Item2
@@ -4045,7 +4267,7 @@ class Mission
 						description="Assistant (Baseplate)";
 						isPlayable=1;
 					};
-					id=3070;
+					id=3847;
 					type="potato_w_mtrag";
 				};
 				class Item3
@@ -4062,7 +4284,7 @@ class Mission
 						description="Gunner (Tube)";
 						isPlayable=1;
 					};
-					id=3071;
+					id=3848;
 					type="potato_w_mtrg";
 				};
 				class Item4
@@ -4079,14 +4301,14 @@ class Mission
 						description="Assistant (Baseplate)";
 						isPlayable=1;
 					};
-					id=3072;
+					id=3849;
 					type="potato_w_mtrag";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3067;
+			id=3844;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4118,7 +4340,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item140
+		class Item144
 		{
 			dataType="Group";
 			side="West";
@@ -4140,7 +4362,7 @@ class Mission
 						description="Team Leader@HMG";
 						isPlayable=1;
 					};
-					id=3074;
+					id=3851;
 					type="potato_w_hmgl";
 				};
 				class Item1
@@ -4157,7 +4379,7 @@ class Mission
 						description="Gunner (Weapon)";
 						isPlayable=1;
 					};
-					id=3075;
+					id=3852;
 					type="potato_w_hmgg";
 				};
 				class Item2
@@ -4174,14 +4396,14 @@ class Mission
 						description="Assistant (Tripod)";
 						isPlayable=1;
 					};
-					id=3076;
+					id=3853;
 					type="potato_w_hmgag";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3073;
+			id=3850;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4213,7 +4435,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item141
+		class Item145
 		{
 			dataType="Group";
 			side="West";
@@ -4235,7 +4457,7 @@ class Mission
 						description="Team Leader@SAM";
 						isPlayable=1;
 					};
-					id=3078;
+					id=3855;
 					type="potato_w_msaml";
 				};
 				class Item1
@@ -4252,7 +4474,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3079;
+					id=3856;
 					type="potato_w_msamg";
 				};
 				class Item2
@@ -4269,14 +4491,14 @@ class Mission
 						description="Assistant";
 						isPlayable=1;
 					};
-					id=3080;
+					id=3857;
 					type="potato_w_msamag";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3077;
+			id=3854;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4308,7 +4530,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item142
+		class Item146
 		{
 			dataType="Group";
 			side="West";
@@ -4330,7 +4552,7 @@ class Mission
 						description="Team Leader@HAT";
 						isPlayable=1;
 					};
-					id=3082;
+					id=3859;
 					type="potato_w_hatl";
 				};
 				class Item1
@@ -4349,7 +4571,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3083;
+					id=3860;
 					type="potato_w_hatg";
 				};
 				class Item2
@@ -4368,14 +4590,14 @@ class Mission
 						description="Assistant";
 						isPlayable=1;
 					};
-					id=3084;
+					id=3861;
 					type="potato_w_hatag";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3081;
+			id=3858;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4407,7 +4629,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item143
+		class Item147
 		{
 			dataType="Group";
 			side="West";
@@ -4430,7 +4652,7 @@ class Mission
 						description="Commander@IFV (Type)";
 						isPlayable=1;
 					};
-					id=3086;
+					id=3863;
 					type="potato_w_vicl";
 				};
 				class Item1
@@ -4450,7 +4672,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3087;
+					id=3864;
 					type="potato_w_vicc";
 				};
 				class Item2
@@ -4469,14 +4691,14 @@ class Mission
 						description="Driver";
 						isPlayable=1;
 					};
-					id=3088;
+					id=3865;
 					type="potato_w_vicd";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3085;
+			id=3862;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4508,7 +4730,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item144
+		class Item148
 		{
 			dataType="Group";
 			side="West";
@@ -4531,7 +4753,7 @@ class Mission
 						description="Commander@IFV (Type)";
 						isPlayable=1;
 					};
-					id=3090;
+					id=3867;
 					type="potato_w_vicl";
 				};
 				class Item1
@@ -4551,7 +4773,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3091;
+					id=3868;
 					type="potato_w_vicc";
 				};
 				class Item2
@@ -4570,14 +4792,14 @@ class Mission
 						description="Driver";
 						isPlayable=1;
 					};
-					id=3092;
+					id=3869;
 					type="potato_w_vicd";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3089;
+			id=3866;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4609,7 +4831,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item145
+		class Item149
 		{
 			dataType="Group";
 			side="West";
@@ -4630,7 +4852,7 @@ class Mission
 						description="Pilot@TRANSPORT HELICOPTER (Type)";
 						isPlayable=1;
 					};
-					id=3094;
+					id=3871;
 					type="potato_w_helicrew";
 				};
 				class Item1
@@ -4647,7 +4869,7 @@ class Mission
 						description="Co-Pilot";
 						isPlayable=1;
 					};
-					id=3095;
+					id=3872;
 					type="potato_w_helicrew";
 				};
 				class Item2
@@ -4664,14 +4886,14 @@ class Mission
 						description="Crew Chief / Door Gunner";
 						isPlayable=1;
 					};
-					id=3096;
+					id=3873;
 					type="potato_w_cc";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3093;
+			id=3870;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4703,7 +4925,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item146
+		class Item150
 		{
 			dataType="Group";
 			side="West";
@@ -4724,7 +4946,7 @@ class Mission
 						description="Pilot@ATTACK HELICOPTER (Type)";
 						isPlayable=1;
 					};
-					id=3098;
+					id=3875;
 					type="potato_w_helicrew";
 				};
 				class Item1
@@ -4741,14 +4963,14 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3099;
+					id=3876;
 					type="potato_w_helicrew";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3097;
+			id=3874;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4780,7 +5002,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item147
+		class Item151
 		{
 			dataType="Group";
 			side="West";
@@ -4802,7 +5024,7 @@ class Mission
 						description="Pilot@FIXED WING (Type)";
 						isPlayable=1;
 					};
-					id=3101;
+					id=3878;
 					type="potato_w_pilot";
 				};
 				class Item1
@@ -4820,14 +5042,14 @@ class Mission
 						description="Weapons System Officer (WSO)";
 						isPlayable=1;
 					};
-					id=3102;
+					id=3879;
 					type="potato_w_pilot";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3100;
+			id=3877;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4859,7 +5081,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item148
+		class Item152
 		{
 			dataType="Group";
 			side="West";
@@ -4878,11 +5100,12 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
+						name="BLU_PL";
 						description="Platoon Leader@1ST PLATOON";
 						isPlayer=1;
 						isPlayable=1;
 					};
-					id=3104;
+					id=3881;
 					type="potato_w_plt";
 					class CustomAttributes
 					{
@@ -4917,7 +5140,7 @@ class Mission
 						description="Platoon Sergeant";
 						isPlayable=1;
 					};
-					id=3105;
+					id=3882;
 					type="potato_w_sgt";
 					class CustomAttributes
 					{
@@ -4952,7 +5175,7 @@ class Mission
 						description="Forward Observer";
 						isPlayable=1;
 					};
-					id=3106;
+					id=3883;
 					type="potato_w_fac";
 					class CustomAttributes
 					{
@@ -4976,7 +5199,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3103;
+			id=3880;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5008,7 +5231,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item149
+		class Item153
 		{
 			dataType="Group";
 			side="West";
@@ -5031,7 +5254,7 @@ class Mission
 						description="Squad Leader@1ST PLATOON - FIRST SQUAD";
 						isPlayable=1;
 					};
-					id=3108;
+					id=3885;
 					type="potato_w_sl";
 					class CustomAttributes
 					{
@@ -5066,7 +5289,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3109;
+					id=3886;
 					type="potato_w_ftl";
 					class CustomAttributes
 					{
@@ -5113,7 +5336,7 @@ class Mission
 						description="Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3110;
+					id=3887;
 					type="potato_w_ar";
 					class CustomAttributes
 					{
@@ -5160,7 +5383,7 @@ class Mission
 						description="Assistant Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3111;
+					id=3888;
 					type="potato_w_aar";
 					class CustomAttributes
 					{
@@ -5209,7 +5432,7 @@ class Mission
 						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3112;
+					id=3889;
 					type="potato_w_ftl";
 					class CustomAttributes
 					{
@@ -5256,7 +5479,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3113;
+					id=3890;
 					type="potato_w_lat";
 					class CustomAttributes
 					{
@@ -5303,7 +5526,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3114;
+					id=3891;
 					type="potato_w_lat";
 					class CustomAttributes
 					{
@@ -5350,7 +5573,7 @@ class Mission
 						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3115;
+					id=3892;
 					type="potato_w_rifleman_03";
 					class CustomAttributes
 					{
@@ -5387,7 +5610,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3107;
+			id=3884;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5419,7 +5642,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item150
+		class Item154
 		{
 			dataType="Group";
 			side="West";
@@ -5442,7 +5665,7 @@ class Mission
 						description="Squad Leader@1ST PLATOON - SECOND SQUAD";
 						isPlayable=1;
 					};
-					id=3117;
+					id=3894;
 					type="potato_w_sl";
 					class CustomAttributes
 					{
@@ -5477,7 +5700,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3118;
+					id=3895;
 					type="potato_w_ftl";
 					class CustomAttributes
 					{
@@ -5524,7 +5747,7 @@ class Mission
 						description="Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3119;
+					id=3896;
 					type="potato_w_ar";
 					class CustomAttributes
 					{
@@ -5571,7 +5794,7 @@ class Mission
 						description="Assistant Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3120;
+					id=3897;
 					type="potato_w_aar";
 					class CustomAttributes
 					{
@@ -5620,7 +5843,7 @@ class Mission
 						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3121;
+					id=3898;
 					type="potato_w_ftl";
 					class CustomAttributes
 					{
@@ -5667,7 +5890,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3122;
+					id=3899;
 					type="potato_w_lat";
 					class CustomAttributes
 					{
@@ -5714,7 +5937,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3123;
+					id=3900;
 					type="potato_w_lat";
 					class CustomAttributes
 					{
@@ -5761,7 +5984,7 @@ class Mission
 						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3124;
+					id=3901;
 					type="potato_w_rifleman_03";
 					class CustomAttributes
 					{
@@ -5798,7 +6021,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3116;
+			id=3893;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5830,7 +6053,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item151
+		class Item155
 		{
 			dataType="Group";
 			side="West";
@@ -5853,7 +6076,7 @@ class Mission
 						description="Squad Leader@1ST PLATOON - THIRD SQUAD";
 						isPlayable=1;
 					};
-					id=3126;
+					id=3903;
 					type="potato_w_sl";
 					class CustomAttributes
 					{
@@ -5888,7 +6111,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3127;
+					id=3904;
 					type="potato_w_ftl";
 					class CustomAttributes
 					{
@@ -5935,7 +6158,7 @@ class Mission
 						description="Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3128;
+					id=3905;
 					type="potato_w_ar";
 					class CustomAttributes
 					{
@@ -5982,7 +6205,7 @@ class Mission
 						description="Assistant Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3129;
+					id=3906;
 					type="potato_w_aar";
 					class CustomAttributes
 					{
@@ -6031,7 +6254,7 @@ class Mission
 						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3130;
+					id=3907;
 					type="potato_w_ftl";
 					class CustomAttributes
 					{
@@ -6078,7 +6301,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3131;
+					id=3908;
 					type="potato_w_lat";
 					class CustomAttributes
 					{
@@ -6125,7 +6348,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3132;
+					id=3909;
 					type="potato_w_lat";
 					class CustomAttributes
 					{
@@ -6172,7 +6395,7 @@ class Mission
 						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3133;
+					id=3910;
 					type="potato_w_rifleman_03";
 					class CustomAttributes
 					{
@@ -6209,7 +6432,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3125;
+			id=3902;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6241,7 +6464,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item152
+		class Item156
 		{
 			dataType="Group";
 			side="West";
@@ -6264,7 +6487,7 @@ class Mission
 						description="Squad Leader@1ST PLATOON - WEAPONS SQUAD";
 						isPlayable=1;
 					};
-					id=3135;
+					id=3912;
 					type="potato_w_sl";
 					class CustomAttributes
 					{
@@ -6299,7 +6522,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3136;
+					id=3913;
 					type="potato_w_mmgl";
 					class CustomAttributes
 					{
@@ -6346,7 +6569,7 @@ class Mission
 						description="Machine Gunner";
 						isPlayable=1;
 					};
-					id=3137;
+					id=3914;
 					type="potato_w_mmgg";
 					class CustomAttributes
 					{
@@ -6393,7 +6616,7 @@ class Mission
 						description="Assistant Machine Gunner";
 						isPlayable=1;
 					};
-					id=3138;
+					id=3915;
 					type="potato_w_mmgag";
 					class CustomAttributes
 					{
@@ -6442,7 +6665,7 @@ class Mission
 						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3139;
+					id=3916;
 					type="potato_w_matl";
 					class CustomAttributes
 					{
@@ -6489,7 +6712,7 @@ class Mission
 						description="Medium Anti-tank Gunner";
 						isPlayable=1;
 					};
-					id=3140;
+					id=3917;
 					type="potato_w_matg";
 					class CustomAttributes
 					{
@@ -6536,7 +6759,7 @@ class Mission
 						description="Medium Anti-tank Assistant";
 						isPlayable=1;
 					};
-					id=3141;
+					id=3918;
 					type="potato_w_matag";
 					class CustomAttributes
 					{
@@ -6583,7 +6806,7 @@ class Mission
 						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3142;
+					id=3919;
 					type="potato_w_rifleman_03";
 					class CustomAttributes
 					{
@@ -6620,7 +6843,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3134;
+			id=3911;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6652,7 +6875,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item153
+		class Item157
 		{
 			dataType="Group";
 			side="West";
@@ -6664,17 +6887,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4029.8176,5.0014391,4094.1553};
+						position[]={4029.8181,5.0014391,4094.155};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
 						rank="LIEUTENANT";
+						name="BLU_2PL";
 						description="Platoon Leader@2ND PLATOON";
 						isPlayable=1;
 					};
-					id=3144;
+					id=3921;
 					type="potato_w_plt";
 				};
 				class Item1
@@ -6692,7 +6916,7 @@ class Mission
 						description="Platoon Sergeant";
 						isPlayable=1;
 					};
-					id=3145;
+					id=3922;
 					type="potato_w_sgt";
 				};
 				class Item2
@@ -6710,14 +6934,14 @@ class Mission
 						description="Forward Observer";
 						isPlayable=1;
 					};
-					id=3146;
+					id=3923;
 					type="potato_w_fac";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3143;
+			id=3920;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6749,7 +6973,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item154
+		class Item158
 		{
 			dataType="Group";
 			side="West";
@@ -6772,7 +6996,7 @@ class Mission
 						description="Squad Leader@2ND PLATOON - FIRST SQUAD";
 						isPlayable=1;
 					};
-					id=3148;
+					id=3925;
 					type="potato_w_sl";
 				};
 				class Item1
@@ -6790,7 +7014,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3149;
+					id=3926;
 					type="potato_w_ftl";
 					class CustomAttributes
 					{
@@ -6824,7 +7048,7 @@ class Mission
 						description="Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3150;
+					id=3927;
 					type="potato_w_ar";
 					class CustomAttributes
 					{
@@ -6858,7 +7082,7 @@ class Mission
 						description="Assistant Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3151;
+					id=3928;
 					type="potato_w_aar";
 					class CustomAttributes
 					{
@@ -6894,7 +7118,7 @@ class Mission
 						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3152;
+					id=3929;
 					type="potato_w_ftl";
 					class CustomAttributes
 					{
@@ -6928,7 +7152,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3153;
+					id=3930;
 					type="potato_w_lat";
 					class CustomAttributes
 					{
@@ -6962,7 +7186,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3154;
+					id=3931;
 					type="potato_w_lat";
 					class CustomAttributes
 					{
@@ -6996,7 +7220,7 @@ class Mission
 						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3155;
+					id=3932;
 					type="potato_w_rifleman_03";
 					class CustomAttributes
 					{
@@ -7020,7 +7244,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3147;
+			id=3924;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7052,7 +7276,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item155
+		class Item159
 		{
 			dataType="Group";
 			side="West";
@@ -7075,7 +7299,7 @@ class Mission
 						description="Squad Leader@2ND PLATOON - SECOND SQUAD";
 						isPlayable=1;
 					};
-					id=3157;
+					id=3934;
 					type="potato_w_sl";
 				};
 				class Item1
@@ -7093,7 +7317,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3158;
+					id=3935;
 					type="potato_w_ftl";
 					class CustomAttributes
 					{
@@ -7127,7 +7351,7 @@ class Mission
 						description="Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3159;
+					id=3936;
 					type="potato_w_ar";
 					class CustomAttributes
 					{
@@ -7161,7 +7385,7 @@ class Mission
 						description="Assistant Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3160;
+					id=3937;
 					type="potato_w_aar";
 					class CustomAttributes
 					{
@@ -7197,7 +7421,7 @@ class Mission
 						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3161;
+					id=3938;
 					type="potato_w_ftl";
 					class CustomAttributes
 					{
@@ -7231,7 +7455,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3162;
+					id=3939;
 					type="potato_w_lat";
 					class CustomAttributes
 					{
@@ -7265,7 +7489,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3163;
+					id=3940;
 					type="potato_w_lat";
 					class CustomAttributes
 					{
@@ -7299,7 +7523,7 @@ class Mission
 						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3164;
+					id=3941;
 					type="potato_w_rifleman_03";
 					class CustomAttributes
 					{
@@ -7323,7 +7547,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3156;
+			id=3933;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7355,7 +7579,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item156
+		class Item160
 		{
 			dataType="Group";
 			side="West";
@@ -7378,7 +7602,7 @@ class Mission
 						description="Squad Leader@2ND PLATOON - THIRD SQUAD";
 						isPlayable=1;
 					};
-					id=3166;
+					id=3943;
 					type="potato_w_sl";
 				};
 				class Item1
@@ -7396,7 +7620,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3167;
+					id=3944;
 					type="potato_w_ftl";
 					class CustomAttributes
 					{
@@ -7430,7 +7654,7 @@ class Mission
 						description="Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3168;
+					id=3945;
 					type="potato_w_ar";
 					class CustomAttributes
 					{
@@ -7464,7 +7688,7 @@ class Mission
 						description="Assistant Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3169;
+					id=3946;
 					type="potato_w_aar";
 					class CustomAttributes
 					{
@@ -7500,7 +7724,7 @@ class Mission
 						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3170;
+					id=3947;
 					type="potato_w_ftl";
 					class CustomAttributes
 					{
@@ -7534,7 +7758,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3171;
+					id=3948;
 					type="potato_w_lat";
 					class CustomAttributes
 					{
@@ -7568,7 +7792,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3172;
+					id=3949;
 					type="potato_w_lat";
 					class CustomAttributes
 					{
@@ -7602,7 +7826,7 @@ class Mission
 						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3173;
+					id=3950;
 					type="potato_w_rifleman_03";
 					class CustomAttributes
 					{
@@ -7626,7 +7850,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3165;
+			id=3942;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7658,7 +7882,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item157
+		class Item161
 		{
 			dataType="Group";
 			side="West";
@@ -7681,7 +7905,7 @@ class Mission
 						description="Squad Leader@2ND PLATOON - WEAPONS SQUAD";
 						isPlayable=1;
 					};
-					id=3175;
+					id=3952;
 					type="potato_w_sl";
 				};
 				class Item1
@@ -7699,7 +7923,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3176;
+					id=3953;
 					type="potato_w_mmgl";
 					class CustomAttributes
 					{
@@ -7733,7 +7957,7 @@ class Mission
 						description="Machine Gunner";
 						isPlayable=1;
 					};
-					id=3177;
+					id=3954;
 					type="potato_w_mmgg";
 					class CustomAttributes
 					{
@@ -7767,7 +7991,7 @@ class Mission
 						description="Assistant Machine Gunner";
 						isPlayable=1;
 					};
-					id=3178;
+					id=3955;
 					type="potato_w_mmgag";
 					class CustomAttributes
 					{
@@ -7803,7 +8027,7 @@ class Mission
 						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3179;
+					id=3956;
 					type="potato_w_matl";
 					class CustomAttributes
 					{
@@ -7837,7 +8061,7 @@ class Mission
 						description="Medium Anti-tank Gunner";
 						isPlayable=1;
 					};
-					id=3180;
+					id=3957;
 					type="potato_w_matg";
 					class CustomAttributes
 					{
@@ -7871,7 +8095,7 @@ class Mission
 						description="Medium Anti-tank Assistant";
 						isPlayable=1;
 					};
-					id=3181;
+					id=3958;
 					type="potato_w_matag";
 					class CustomAttributes
 					{
@@ -7905,7 +8129,7 @@ class Mission
 						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3182;
+					id=3959;
 					type="potato_w_rifleman_03";
 					class CustomAttributes
 					{
@@ -7929,7 +8153,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3174;
+			id=3951;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7961,7 +8185,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item158
+		class Item162
 		{
 			dataType="Group";
 			side="East";
@@ -7984,7 +8208,7 @@ class Mission
 						description="Commander@COMPANY";
 						isPlayable=1;
 					};
-					id=3184;
+					id=3961;
 					type="potato_e_coy";
 					class CustomAttributes
 					{
@@ -8020,7 +8244,7 @@ class Mission
 						description="First Sergeant";
 						isPlayable=1;
 					};
-					id=3185;
+					id=3962;
 					type="potato_e_xo";
 					class CustomAttributes
 					{
@@ -8054,7 +8278,7 @@ class Mission
 						description="UAV Operator";
 						isPlayable=1;
 					};
-					id=3186;
+					id=3963;
 					type="potato_e_uav";
 					class CustomAttributes
 					{
@@ -8078,7 +8302,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3183;
+			id=3960;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8097,7 +8321,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item159
+		class Item163
 		{
 			dataType="Group";
 			side="East";
@@ -8120,7 +8344,7 @@ class Mission
 						description="Medical Officer@MEDICAL";
 						isPlayable=1;
 					};
-					id=3188;
+					id=3965;
 					type="potato_e_plm";
 					class CustomAttributes
 					{
@@ -8168,7 +8392,7 @@ class Mission
 						description="Medic";
 						isPlayable=1;
 					};
-					id=3189;
+					id=3966;
 					type="potato_e_sm";
 					class CustomAttributes
 					{
@@ -8216,7 +8440,7 @@ class Mission
 						description="Medic";
 						isPlayable=1;
 					};
-					id=3190;
+					id=3967;
 					type="potato_e_sm";
 					class CustomAttributes
 					{
@@ -8264,7 +8488,7 @@ class Mission
 						description="Medic";
 						isPlayable=1;
 					};
-					id=3191;
+					id=3968;
 					type="potato_e_sm";
 					class CustomAttributes
 					{
@@ -8301,7 +8525,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3187;
+			id=3964;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8320,7 +8544,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item160
+		class Item164
 		{
 			dataType="Group";
 			side="East";
@@ -8342,7 +8566,7 @@ class Mission
 						description="Team Leader@ENGINEER";
 						isPlayable=1;
 					};
-					id=3193;
+					id=3970;
 					type="potato_e_engl";
 				};
 				class Item1
@@ -8359,7 +8583,7 @@ class Mission
 						description="Engineer";
 						isPlayable=1;
 					};
-					id=3194;
+					id=3971;
 					type="potato_e_eng";
 				};
 				class Item2
@@ -8376,7 +8600,7 @@ class Mission
 						description="Engineer";
 						isPlayable=1;
 					};
-					id=3195;
+					id=3972;
 					type="potato_e_eng";
 				};
 				class Item3
@@ -8393,14 +8617,14 @@ class Mission
 						description="Engineer";
 						isPlayable=1;
 					};
-					id=3196;
+					id=3973;
 					type="potato_e_eng";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3192;
+			id=3969;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8432,7 +8656,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item161
+		class Item165
 		{
 			dataType="Group";
 			side="East";
@@ -8454,7 +8678,7 @@ class Mission
 						description="Team Leader@RECON";
 						isPlayable=1;
 					};
-					id=3198;
+					id=3975;
 					type="potato_e_stl";
 				};
 				class Item1
@@ -8471,7 +8695,7 @@ class Mission
 						description="Sniper";
 						isPlayable=1;
 					};
-					id=3199;
+					id=3976;
 					type="potato_e_sniper";
 				};
 				class Item2
@@ -8488,7 +8712,7 @@ class Mission
 						description="Scout";
 						isPlayable=1;
 					};
-					id=3200;
+					id=3977;
 					type="potato_e_spotter";
 				};
 				class Item3
@@ -8505,14 +8729,14 @@ class Mission
 						description="Scout";
 						isPlayable=1;
 					};
-					id=3201;
+					id=3978;
 					type="potato_e_spotter";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3197;
+			id=3974;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8544,7 +8768,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item162
+		class Item166
 		{
 			dataType="Group";
 			side="East";
@@ -8566,7 +8790,7 @@ class Mission
 						description="Battery Commander@ARTILLERY";
 						isPlayable=1;
 					};
-					id=3203;
+					id=3980;
 					type="potato_e_artl";
 				};
 				class Item1
@@ -8583,7 +8807,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3204;
+					id=3981;
 					type="potato_e_artg";
 				};
 				class Item2
@@ -8600,7 +8824,7 @@ class Mission
 						description="Assistant";
 						isPlayable=1;
 					};
-					id=3205;
+					id=3982;
 					type="potato_e_artg";
 				};
 				class Item3
@@ -8617,7 +8841,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3206;
+					id=3983;
 					type="potato_e_artg";
 				};
 				class Item4
@@ -8634,7 +8858,7 @@ class Mission
 						description="Assistant";
 						isPlayable=1;
 					};
-					id=3207;
+					id=3984;
 					type="potato_e_artg";
 				};
 				class Item5
@@ -8651,7 +8875,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3208;
+					id=3985;
 					type="potato_e_artg";
 				};
 				class Item6
@@ -8668,14 +8892,14 @@ class Mission
 						description="Assistant";
 						isPlayable=1;
 					};
-					id=3209;
+					id=3986;
 					type="potato_e_artg";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3202;
+			id=3979;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8707,7 +8931,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item163
+		class Item167
 		{
 			dataType="Group";
 			side="East";
@@ -8729,7 +8953,7 @@ class Mission
 						description="Team Leader@MORTAR";
 						isPlayable=1;
 					};
-					id=3211;
+					id=3988;
 					type="potato_e_mtrl";
 				};
 				class Item1
@@ -8746,7 +8970,7 @@ class Mission
 						description="Gunner (Tube)";
 						isPlayable=1;
 					};
-					id=3212;
+					id=3989;
 					type="potato_e_mtrg";
 				};
 				class Item2
@@ -8763,7 +8987,7 @@ class Mission
 						description="Assistant (Baseplate)";
 						isPlayable=1;
 					};
-					id=3213;
+					id=3990;
 					type="potato_e_mtrag";
 				};
 				class Item3
@@ -8780,7 +9004,7 @@ class Mission
 						description="Gunner (Tube)";
 						isPlayable=1;
 					};
-					id=3214;
+					id=3991;
 					type="potato_e_mtrg";
 				};
 				class Item4
@@ -8797,14 +9021,14 @@ class Mission
 						description="Assistant (Baseplate)";
 						isPlayable=1;
 					};
-					id=3215;
+					id=3992;
 					type="potato_e_mtrag";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3210;
+			id=3987;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8836,7 +9060,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item164
+		class Item168
 		{
 			dataType="Group";
 			side="East";
@@ -8858,7 +9082,7 @@ class Mission
 						description="Team Leader@HMG";
 						isPlayable=1;
 					};
-					id=3217;
+					id=3994;
 					type="potato_e_hmgl";
 				};
 				class Item1
@@ -8875,7 +9099,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3218;
+					id=3995;
 					type="potato_e_hmgg";
 				};
 				class Item2
@@ -8892,14 +9116,14 @@ class Mission
 						description="Assistant";
 						isPlayable=1;
 					};
-					id=3219;
+					id=3996;
 					type="potato_e_hmgag";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3216;
+			id=3993;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8931,7 +9155,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item165
+		class Item169
 		{
 			dataType="Group";
 			side="East";
@@ -8953,7 +9177,7 @@ class Mission
 						description="Team Leader@HAT";
 						isPlayable=1;
 					};
-					id=3221;
+					id=3998;
 					type="potato_e_hatl";
 				};
 				class Item1
@@ -8970,7 +9194,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3222;
+					id=3999;
 					type="potato_e_hatg";
 				};
 				class Item2
@@ -8987,14 +9211,14 @@ class Mission
 						description="Assistant";
 						isPlayable=1;
 					};
-					id=3223;
+					id=4000;
 					type="potato_e_hatag";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3220;
+			id=3997;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9026,7 +9250,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item166
+		class Item170
 		{
 			dataType="Group";
 			side="East";
@@ -9047,7 +9271,7 @@ class Mission
 						description="Team Leader@SAM";
 						isPlayable=1;
 					};
-					id=3225;
+					id=4002;
 					type="potato_e_msaml";
 				};
 				class Item1
@@ -9064,7 +9288,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3226;
+					id=4003;
 					type="potato_e_msamg";
 				};
 				class Item2
@@ -9081,14 +9305,14 @@ class Mission
 						description="Assistant";
 						isPlayable=1;
 					};
-					id=3227;
+					id=4004;
 					type="potato_e_msamag";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3224;
+			id=4001;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9120,7 +9344,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item167
+		class Item171
 		{
 			dataType="Group";
 			side="East";
@@ -9141,7 +9365,7 @@ class Mission
 						description="Commander@IFV (Type)";
 						isPlayable=1;
 					};
-					id=3229;
+					id=4006;
 					type="potato_e_vicl";
 				};
 				class Item1
@@ -9158,7 +9382,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3230;
+					id=4007;
 					type="potato_e_vicc";
 				};
 				class Item2
@@ -9175,14 +9399,14 @@ class Mission
 						description="Driver";
 						isPlayable=1;
 					};
-					id=3231;
+					id=4008;
 					type="potato_e_vicd";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3228;
+			id=4005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9214,7 +9438,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item168
+		class Item172
 		{
 			dataType="Group";
 			side="East";
@@ -9235,7 +9459,7 @@ class Mission
 						description="Commander@TANK (Type)";
 						isPlayable=1;
 					};
-					id=3233;
+					id=4010;
 					type="potato_e_vicl";
 				};
 				class Item1
@@ -9252,7 +9476,7 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3234;
+					id=4011;
 					type="potato_e_vicc";
 				};
 				class Item2
@@ -9269,14 +9493,14 @@ class Mission
 						description="Driver";
 						isPlayable=1;
 					};
-					id=3235;
+					id=4012;
 					type="potato_e_vicd";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3232;
+			id=4009;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9308,7 +9532,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item169
+		class Item173
 		{
 			dataType="Group";
 			side="East";
@@ -9329,7 +9553,7 @@ class Mission
 						description="Pilot@TRANSPORT HELICOPTER (Type)";
 						isPlayable=1;
 					};
-					id=3237;
+					id=4014;
 					type="potato_e_helicrew";
 				};
 				class Item1
@@ -9346,7 +9570,7 @@ class Mission
 						description="Co-Pilot";
 						isPlayable=1;
 					};
-					id=3238;
+					id=4015;
 					type="potato_e_helicrew";
 				};
 				class Item2
@@ -9363,14 +9587,14 @@ class Mission
 						description="Crew Chief / Door Gunner";
 						isPlayable=1;
 					};
-					id=3239;
+					id=4016;
 					type="potato_e_cc";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3236;
+			id=4013;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9402,7 +9626,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item170
+		class Item174
 		{
 			dataType="Group";
 			side="East";
@@ -9414,16 +9638,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3981.0164,5.0014391,4072.041};
+						position[]={3981.0161,5.0014391,4072.041};
 					};
 					side="East";
 					flags=7;
 					class Attributes
 					{
-						description="Pilot@TRANSPORT HELICOPTER (Type)";
+						description="Pilot@ATTACK HELICOPTER (Type)";
 						isPlayable=1;
 					};
-					id=3241;
+					id=4018;
 					type="potato_e_helicrew";
 				};
 				class Item1
@@ -9440,14 +9664,14 @@ class Mission
 						description="Gunner";
 						isPlayable=1;
 					};
-					id=3242;
+					id=4019;
 					type="potato_e_helicrew";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3240;
+			id=4017;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9479,7 +9703,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item171
+		class Item175
 		{
 			dataType="Group";
 			side="East";
@@ -9501,7 +9725,7 @@ class Mission
 						description="Pilot@FIXED WING (Type)";
 						isPlayable=1;
 					};
-					id=3244;
+					id=4021;
 					type="potato_e_pilot";
 				};
 				class Item1
@@ -9519,14 +9743,14 @@ class Mission
 						description="Weapons System Officer (WSO)";
 						isPlayable=1;
 					};
-					id=3245;
+					id=4022;
 					type="potato_e_pilot";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=3243;
+			id=4020;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9558,7 +9782,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item172
+		class Item176
 		{
 			dataType="Group";
 			side="East";
@@ -9577,10 +9801,11 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
+						name="OPF_PL";
 						description="Platoon Leader@1ST PLATOON";
 						isPlayable=1;
 					};
-					id=3247;
+					id=4024;
 					type="potato_e_plt";
 					class CustomAttributes
 					{
@@ -9605,18 +9830,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4004.083,5.0014391,4118.0981};
+						position[]={4000.03,5.0014391,4118.0039};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						rank="CORPORAL";
-						description="Forward Observer";
+						rank="SERGEANT";
+						description="Platoon Sergeant";
 						isPlayable=1;
 					};
-					id=3248;
-					type="potato_e_fac";
+					id=4025;
+					type="potato_e_sgt";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9640,18 +9865,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4000.03,5.0014391,4118.0039};
+						position[]={4004.083,5.0014391,4118.0981};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						rank="SERGEANT";
-						description="Platoon Sergeant";
+						rank="CORPORAL";
+						description="Forward Observer";
 						isPlayable=1;
 					};
-					id=3249;
-					type="potato_e_sgt";
+					id=4026;
+					type="potato_e_fac";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9674,7 +9899,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3246;
+			id=4023;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9706,7 +9931,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item173
+		class Item177
 		{
 			dataType="Group";
 			side="East";
@@ -9729,7 +9954,7 @@ class Mission
 						description="Squad Leader@1ST PLATOON - FIRST SQUAD";
 						isPlayable=1;
 					};
-					id=3251;
+					id=4028;
 					type="potato_e_sl";
 					class CustomAttributes
 					{
@@ -9764,7 +9989,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3252;
+					id=4029;
 					type="potato_e_ftl";
 					class CustomAttributes
 					{
@@ -9802,17 +10027,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4008.0969,5.0014391,4110.0146};
+						position[]={4008.0071,5.0014391,4108.0649};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Automatic Rifleman";
+						description="Assistant Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3253;
-					type="potato_e_ftl";
+					id=4030;
+					type="potato_e_aar";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9849,17 +10074,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4008.0071,5.0014391,4108.0649};
+						position[]={4008.0161,5.0014391,4106.043};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Assistant Automatic Rifleman";
+						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3254;
-					type="potato_e_aar";
+					id=4031;
+					type="potato_e_ftl";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9871,7 +10096,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="0,0,4";
+									value="1,0,4";
 								};
 							};
 						};
@@ -9884,7 +10109,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="RED";
+									value="GREEN";
 								};
 							};
 						};
@@ -9896,17 +10121,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4008.0161,5.0014391,4106.043};
+						position[]={4008.0054,5.0014391,4104.0132};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Team Leader (3IC)";
+						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3255;
-					type="potato_e_ftl";
+					id=4032;
+					type="potato_e_lat";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9943,7 +10168,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4008.0054,5.0014391,4104.0132};
+						position[]={4008.0371,5.0014391,4102.1577};
 					};
 					side="East";
 					flags=5;
@@ -9952,7 +10177,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3256;
+					id=4033;
 					type="potato_e_lat";
 					class CustomAttributes
 					{
@@ -9990,17 +10215,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4008.0371,5.0014391,4102.1577};
+						position[]={4007.9919,5.0014391,4100.043};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Rifleman (AT)";
+						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3257;
-					type="potato_e_lat";
+					id=4034;
+					type="potato_e_rifleman_03";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10037,17 +10262,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4007.9919,5.0014391,4100.043};
+						position[]={4008.0969,5.0014391,4110.0146};
 					};
 					side="East";
-					flags=5;
+					flags=4;
 					class Attributes
 					{
-						description="Rifleman (CLS)";
+						description="Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3258;
-					type="potato_e_rifleman_03";
+					id=4035;
+					type="potato_e_ar";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10059,7 +10284,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="1,0,4";
+									value="0,0,4";
 								};
 							};
 						};
@@ -10072,7 +10297,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="GREEN";
+									value="MAIN";
 								};
 							};
 						};
@@ -10083,7 +10308,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3250;
+			id=4027;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10115,7 +10340,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item174
+		class Item178
 		{
 			dataType="Group";
 			side="East";
@@ -10138,7 +10363,7 @@ class Mission
 						description="Squad Leader@1ST PLATOON - SECOND SQUAD";
 						isPlayable=1;
 					};
-					id=3260;
+					id=4037;
 					type="potato_e_sl";
 					class CustomAttributes
 					{
@@ -10173,7 +10398,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3261;
+					id=4038;
 					type="potato_e_ftl";
 					class CustomAttributes
 					{
@@ -10211,17 +10436,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4004.012,5.0014391,4110.0015};
+						position[]={4003.9221,5.0014391,4108.0518};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Automatic Rifleman";
+						description="Assistant Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3262;
-					type="potato_e_ftl";
+					id=4039;
+					type="potato_e_aar";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10258,17 +10483,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4003.9221,5.0014391,4108.0518};
+						position[]={4003.9312,5.0014391,4106.0298};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Assistant Automatic Rifleman";
+						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3263;
-					type="potato_e_aar";
+					id=4040;
+					type="potato_e_ftl";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10280,7 +10505,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="2,1,4";
+									value="3,1,4";
 								};
 							};
 						};
@@ -10293,7 +10518,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="RED";
+									value="GREEN";
 								};
 							};
 						};
@@ -10305,17 +10530,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4003.9312,5.0014391,4106.0298};
+						position[]={4003.9204,5.0014391,4104};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Team Leader (3IC)";
+						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3264;
-					type="potato_e_ftl";
+					id=4041;
+					type="potato_e_lat";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10352,7 +10577,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4003.9204,5.0014391,4104};
+						position[]={4003.9521,5.0014391,4102.1445};
 					};
 					side="East";
 					flags=5;
@@ -10361,7 +10586,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3265;
+					id=4042;
 					type="potato_e_lat";
 					class CustomAttributes
 					{
@@ -10399,17 +10624,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4003.9521,5.0014391,4102.1445};
+						position[]={4003.907,5.0014391,4100.0298};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Rifleman (AT)";
+						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3266;
-					type="potato_e_lat";
+					id=4043;
+					type="potato_e_rifleman_03";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10446,17 +10671,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4003.907,5.0014391,4100.0298};
+						position[]={4004.012,5.0014391,4110.002};
 					};
 					side="East";
-					flags=5;
+					flags=4;
 					class Attributes
 					{
-						description="Rifleman (CLS)";
+						description="Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3267;
-					type="potato_e_rifleman_03";
+					id=4044;
+					type="potato_e_ar";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10468,7 +10693,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="3,1,4";
+									value="2,1,4";
 								};
 							};
 						};
@@ -10481,7 +10706,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="GREEN";
+									value="MAIN";
 								};
 							};
 						};
@@ -10492,7 +10717,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3259;
+			id=4036;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10524,7 +10749,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item175
+		class Item179
 		{
 			dataType="Group";
 			side="East";
@@ -10547,7 +10772,7 @@ class Mission
 						description="Squad Leader@1ST PLATOON - THIRD SQUAD";
 						isPlayable=1;
 					};
-					id=3269;
+					id=4046;
 					type="potato_e_sl";
 					class CustomAttributes
 					{
@@ -10582,7 +10807,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3270;
+					id=4047;
 					type="potato_e_ftl";
 					class CustomAttributes
 					{
@@ -10620,17 +10845,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4000.0049,5.0014391,4109.957};
+						position[]={3999.915,5.0014391,4108.0073};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Automatic Rifleman";
+						description="Assistant Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3271;
-					type="potato_e_ftl";
+					id=4048;
+					type="potato_e_aar";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10667,17 +10892,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.915,5.0014391,4108.0073};
+						position[]={3999.9241,5.0014391,4105.9854};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Assistant Automatic Rifleman";
+						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3272;
-					type="potato_e_aar";
+					id=4049;
+					type="potato_e_ftl";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10689,7 +10914,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="4,2,4";
+									value="5,2,4";
 								};
 							};
 						};
@@ -10702,7 +10927,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="RED";
+									value="GREEN";
 								};
 							};
 						};
@@ -10714,17 +10939,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.9241,5.0014391,4105.9854};
+						position[]={3999.9133,5.0014391,4103.9556};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Team Leader (3IC)";
+						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3273;
-					type="potato_e_ftl";
+					id=4050;
+					type="potato_e_lat";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10761,7 +10986,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.9133,5.0014391,4103.9556};
+						position[]={3999.9451,5.0014391,4102.1001};
 					};
 					side="East";
 					flags=5;
@@ -10770,7 +10995,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3274;
+					id=4051;
 					type="potato_e_lat";
 					class CustomAttributes
 					{
@@ -10808,17 +11033,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.9451,5.0014391,4102.1001};
+						position[]={3999.8999,5.0014391,4099.9854};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Rifleman (AT)";
+						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3275;
-					type="potato_e_lat";
+					id=4052;
+					type="potato_e_rifleman_03";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10855,17 +11080,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.8999,5.0014391,4099.9854};
+						position[]={4000.0049,5.0014391,4109.957};
 					};
 					side="East";
-					flags=5;
+					flags=4;
 					class Attributes
 					{
-						description="Rifleman (CLS)";
+						description="Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3276;
-					type="potato_e_rifleman_03";
+					id=4053;
+					type="potato_e_ar";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10877,7 +11102,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="5,2,4";
+									value="4,2,4";
 								};
 							};
 						};
@@ -10890,7 +11115,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="GREEN";
+									value="MAIN";
 								};
 							};
 						};
@@ -10901,7 +11126,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3268;
+			id=4045;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10933,7 +11158,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item176
+		class Item180
 		{
 			dataType="Group";
 			side="East";
@@ -10956,7 +11181,7 @@ class Mission
 						description="Squad Leader@1ST PLATOON - WEAPONS SQUAD";
 						isPlayable=1;
 					};
-					id=3278;
+					id=4055;
 					type="potato_e_sl";
 					class CustomAttributes
 					{
@@ -10991,7 +11216,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3279;
+					id=4056;
 					type="potato_e_mmgl";
 					class CustomAttributes
 					{
@@ -11038,7 +11263,7 @@ class Mission
 						description="Machine Gunner";
 						isPlayable=1;
 					};
-					id=3280;
+					id=4057;
 					type="potato_e_mmgg";
 					class CustomAttributes
 					{
@@ -11085,7 +11310,7 @@ class Mission
 						description="Assistant Machine Gunner";
 						isPlayable=1;
 					};
-					id=3281;
+					id=4058;
 					type="potato_e_mmgag";
 					class CustomAttributes
 					{
@@ -11132,7 +11357,7 @@ class Mission
 						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3282;
+					id=4059;
 					type="potato_e_matl";
 					class CustomAttributes
 					{
@@ -11179,7 +11404,7 @@ class Mission
 						description="Medium Anti-tank Gunner";
 						isPlayable=1;
 					};
-					id=3283;
+					id=4060;
 					type="potato_e_matg";
 					class CustomAttributes
 					{
@@ -11226,7 +11451,7 @@ class Mission
 						description="Medium Anti-tank Assistant";
 						isPlayable=1;
 					};
-					id=3284;
+					id=4061;
 					type="potato_e_matag";
 					class CustomAttributes
 					{
@@ -11273,7 +11498,7 @@ class Mission
 						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3285;
+					id=4062;
 					type="potato_e_rifleman_03";
 					class CustomAttributes
 					{
@@ -11310,7 +11535,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3277;
+			id=4054;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11342,7 +11567,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item177
+		class Item181
 		{
 			dataType="Group";
 			side="East";
@@ -11354,17 +11579,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4001.9409,5.0014391,4093.8699};
+						position[]={4001.9409,5.0014391,4093.8701};
 					};
 					side="East";
 					flags=7;
 					class Attributes
 					{
 						rank="LIEUTENANT";
+						name="OPF_2PL";
 						description="Platoon Leader@2ND PLATOON";
 						isPlayable=1;
 					};
-					id=3287;
+					id=4064;
 					type="potato_e_plt";
 					class CustomAttributes
 					{
@@ -11389,18 +11615,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4004.022,5.0014391,4091.9258};
+						position[]={3999.969,5.0014391,4091.8315};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						rank="CORPORAL";
-						description="Forward Observer";
+						rank="SERGEANT";
+						description="Platoon Sergeant";
 						isPlayable=1;
 					};
-					id=3288;
-					type="potato_e_fac";
+					id=4065;
+					type="potato_e_sgt";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11424,18 +11650,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.969,5.0014391,4091.8315};
+						position[]={4004.022,5.0014391,4091.9258};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						rank="SERGEANT";
-						description="Platoon Sergeant";
+						rank="CORPORAL";
+						description="Forward Observer";
 						isPlayable=1;
 					};
-					id=3289;
-					type="potato_e_sgt";
+					id=4066;
+					type="potato_e_fac";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11458,7 +11684,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3286;
+			id=4063;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11490,7 +11716,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item178
+		class Item182
 		{
 			dataType="Group";
 			side="East";
@@ -11513,7 +11739,7 @@ class Mission
 						description="Squad Leader@2ND PLATOON - FIRST SQUAD";
 						isPlayable=1;
 					};
-					id=3291;
+					id=4068;
 					type="potato_e_sl";
 					class CustomAttributes
 					{
@@ -11548,7 +11774,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3292;
+					id=4069;
 					type="potato_e_ftl";
 					class CustomAttributes
 					{
@@ -11586,17 +11812,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4008.0359,5.0014391,4083.8423};
+						position[]={4007.946,5.0014391,4081.8926};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Automatic Rifleman";
+						description="Assistant Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3293;
-					type="potato_e_ftl";
+					id=4070;
+					type="potato_e_aar";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11633,17 +11859,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4007.946,5.0014391,4081.8926};
+						position[]={4007.9551,5.0014391,4079.8706};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Assistant Automatic Rifleman";
+						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3294;
-					type="potato_e_aar";
+					id=4071;
+					type="potato_e_ftl";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11655,7 +11881,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="0,0,4";
+									value="1,0,4";
 								};
 							};
 						};
@@ -11668,7 +11894,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="RED";
+									value="GREEN";
 								};
 							};
 						};
@@ -11680,17 +11906,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4007.9551,5.0014391,4079.8706};
+						position[]={4007.9443,5.0014391,4077.8408};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Team Leader (3IC)";
+						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3295;
-					type="potato_e_ftl";
+					id=4072;
+					type="potato_e_lat";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11727,7 +11953,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4007.9443,5.0014391,4077.8408};
+						position[]={4007.9761,5.0014391,4075.9854};
 					};
 					side="East";
 					flags=5;
@@ -11736,7 +11962,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3296;
+					id=4073;
 					type="potato_e_lat";
 					class CustomAttributes
 					{
@@ -11774,17 +12000,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4007.9761,5.0014391,4075.9854};
+						position[]={4007.9309,5.0014391,4073.8706};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Rifleman (AT)";
+						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3297;
-					type="potato_e_lat";
+					id=4074;
+					type="potato_e_rifleman_03";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11821,17 +12047,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4007.9309,5.0014391,4073.8706};
+						position[]={4008.0359,5.0014391,4083.8423};
 					};
 					side="East";
-					flags=5;
+					flags=4;
 					class Attributes
 					{
-						description="Rifleman (CLS)";
+						description="Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3298;
-					type="potato_e_rifleman_03";
+					id=4075;
+					type="potato_e_ar";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11843,7 +12069,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="1,0,4";
+									value="0,0,4";
 								};
 							};
 						};
@@ -11856,7 +12082,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="GREEN";
+									value="MAIN";
 								};
 							};
 						};
@@ -11867,7 +12093,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3290;
+			id=4067;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11899,7 +12125,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item179
+		class Item183
 		{
 			dataType="Group";
 			side="East";
@@ -11922,7 +12148,7 @@ class Mission
 						description="Squad Leader@2ND PLATOON - SECOND SQUAD";
 						isPlayable=1;
 					};
-					id=3300;
+					id=4077;
 					type="potato_e_sl";
 					class CustomAttributes
 					{
@@ -11957,7 +12183,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3301;
+					id=4078;
 					type="potato_e_ftl";
 					class CustomAttributes
 					{
@@ -11995,17 +12221,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4003.9509,5.0014391,4083.8291};
+						position[]={4003.8611,5.0014391,4081.8794};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Automatic Rifleman";
+						description="Assistant Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3302;
-					type="potato_e_ftl";
+					id=4079;
+					type="potato_e_aar";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12042,17 +12268,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4003.8611,5.0014391,4081.8794};
+						position[]={4003.8701,5.0014391,4079.8574};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Assistant Automatic Rifleman";
+						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3303;
-					type="potato_e_aar";
+					id=4080;
+					type="potato_e_ftl";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12064,7 +12290,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="2,1,4";
+									value="3,1,4";
 								};
 							};
 						};
@@ -12077,7 +12303,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="RED";
+									value="GREEN";
 								};
 							};
 						};
@@ -12089,17 +12315,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4003.8701,5.0014391,4079.8574};
+						position[]={4003.8594,5.0014391,4077.8276};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Team Leader (3IC)";
+						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3304;
-					type="potato_e_ftl";
+					id=4081;
+					type="potato_e_lat";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12136,7 +12362,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4003.8594,5.0014391,4077.8276};
+						position[]={4003.8911,5.0014391,4075.9722};
 					};
 					side="East";
 					flags=5;
@@ -12145,7 +12371,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3305;
+					id=4082;
 					type="potato_e_lat";
 					class CustomAttributes
 					{
@@ -12183,17 +12409,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4003.8911,5.0014391,4075.9722};
+						position[]={4003.8459,5.0014391,4073.8574};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Rifleman (AT)";
+						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3306;
-					type="potato_e_lat";
+					id=4083;
+					type="potato_e_rifleman_03";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12230,17 +12456,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4003.8459,5.0014391,4073.8574};
+						position[]={4003.9509,5.0014391,4083.8291};
 					};
 					side="East";
-					flags=5;
+					flags=4;
 					class Attributes
 					{
-						description="Rifleman (CLS)";
+						description="Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3307;
-					type="potato_e_rifleman_03";
+					id=4084;
+					type="potato_e_ar";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12252,7 +12478,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="3,1,4";
+									value="2,1,4";
 								};
 							};
 						};
@@ -12265,7 +12491,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="GREEN";
+									value="MAIN";
 								};
 							};
 						};
@@ -12276,7 +12502,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3299;
+			id=4076;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12308,7 +12534,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item180
+		class Item184
 		{
 			dataType="Group";
 			side="East";
@@ -12331,7 +12557,7 @@ class Mission
 						description="Squad Leader@2ND PLATOON - THIRD SQUAD";
 						isPlayable=1;
 					};
-					id=3309;
+					id=4086;
 					type="potato_e_sl";
 					class CustomAttributes
 					{
@@ -12366,7 +12592,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3310;
+					id=4087;
 					type="potato_e_ftl";
 					class CustomAttributes
 					{
@@ -12404,17 +12630,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.9438,5.0014391,4083.7847};
+						position[]={3999.854,5.0014391,4081.835};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Automatic Rifleman";
+						description="Assistant Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3311;
-					type="potato_e_ftl";
+					id=4088;
+					type="potato_e_aar";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12451,17 +12677,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.854,5.0014391,4081.835};
+						position[]={3999.863,5.0014391,4079.813};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Assistant Automatic Rifleman";
+						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3312;
-					type="potato_e_aar";
+					id=4089;
+					type="potato_e_ftl";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12473,7 +12699,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="4,2,4";
+									value="5,2,4";
 								};
 							};
 						};
@@ -12486,7 +12712,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="RED";
+									value="GREEN";
 								};
 							};
 						};
@@ -12498,17 +12724,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.863,5.0014391,4079.813};
+						position[]={3999.8523,5.0014391,4077.7832};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Team Leader (3IC)";
+						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3313;
-					type="potato_e_ftl";
+					id=4090;
+					type="potato_e_lat";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12545,7 +12771,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.8523,5.0014391,4077.7832};
+						position[]={3999.884,5.0014391,4075.9277};
 					};
 					side="East";
 					flags=5;
@@ -12554,7 +12780,7 @@ class Mission
 						description="Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=3314;
+					id=4091;
 					type="potato_e_lat";
 					class CustomAttributes
 					{
@@ -12592,17 +12818,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.884,5.0014391,4075.9277};
+						position[]={3999.8389,5.0014391,4073.813};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Rifleman (AT)";
+						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3315;
-					type="potato_e_lat";
+					id=4092;
+					type="potato_e_rifleman_03";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12639,17 +12865,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3999.8389,5.0014391,4073.813};
+						position[]={3999.9438,5.0014391,4083.7847};
 					};
 					side="East";
-					flags=5;
+					flags=4;
 					class Attributes
 					{
-						description="Rifleman (CLS)";
+						description="Automatic Rifleman";
 						isPlayable=1;
 					};
-					id=3316;
-					type="potato_e_rifleman_03";
+					id=4093;
+					type="potato_e_ar";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12661,7 +12887,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="5,2,4";
+									value="4,2,4";
 								};
 							};
 						};
@@ -12674,7 +12900,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="GREEN";
+									value="MAIN";
 								};
 							};
 						};
@@ -12685,7 +12911,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3308;
+			id=4085;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12717,7 +12943,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item181
+		class Item185
 		{
 			dataType="Group";
 			side="East";
@@ -12740,7 +12966,7 @@ class Mission
 						description="Squad Leader@2ND PLATOON - WEAPONS SQUAD";
 						isPlayable=1;
 					};
-					id=3318;
+					id=4095;
 					type="potato_e_sl";
 					class CustomAttributes
 					{
@@ -12775,7 +13001,7 @@ class Mission
 						description="Team Leader (2IC)";
 						isPlayable=1;
 					};
-					id=3319;
+					id=4096;
 					type="potato_e_mmgl";
 					class CustomAttributes
 					{
@@ -12822,7 +13048,7 @@ class Mission
 						description="Machine Gunner";
 						isPlayable=1;
 					};
-					id=3320;
+					id=4097;
 					type="potato_e_mmgg";
 					class CustomAttributes
 					{
@@ -12869,7 +13095,7 @@ class Mission
 						description="Assistant Machine Gunner";
 						isPlayable=1;
 					};
-					id=3321;
+					id=4098;
 					type="potato_e_mmgag";
 					class CustomAttributes
 					{
@@ -12916,7 +13142,7 @@ class Mission
 						description="Team Leader (3IC)";
 						isPlayable=1;
 					};
-					id=3322;
+					id=4099;
 					type="potato_e_matl";
 					class CustomAttributes
 					{
@@ -12963,7 +13189,7 @@ class Mission
 						description="Medium Anti-tank Gunner";
 						isPlayable=1;
 					};
-					id=3323;
+					id=4100;
 					type="potato_e_matg";
 					class CustomAttributes
 					{
@@ -13010,7 +13236,7 @@ class Mission
 						description="Medium Anti-tank Assistant";
 						isPlayable=1;
 					};
-					id=3324;
+					id=4101;
 					type="potato_e_matag";
 					class CustomAttributes
 					{
@@ -13057,7 +13283,7 @@ class Mission
 						description="Rifleman (CLS)";
 						isPlayable=1;
 					};
-					id=3325;
+					id=4102;
 					type="potato_e_rifleman_03";
 					class CustomAttributes
 					{
@@ -13094,7 +13320,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=3317;
+			id=4094;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13126,57 +13352,15 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item182
+		class Item186
 		{
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={3998.1196,5,4156.2046};
+				position[]={3983.9607,5,4132.1064};
 			};
-			title="OPTIONAL: OPFOR Logi Vehicle";
-			description="This vehicle will be populated with gearscript-specific items. Update the vehicle class inside your gearscript to match whatever the classname of this vehicle is.";
-			id=3326;
-		};
-		class Item183
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3998.1799,7.3817043,4150.6294};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=3328;
-			type="O_Truck_02_Ammo_F";
-		};
-		class Item184
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={4034.02,5,4155.9482};
-			};
-			title="OPTIONAL: BLUFOR Logi Vehicle";
-			description="This vehicle will be populated with gearscript-specific items. Update the vehicle class inside your gearscript to match whatever the classname of this vehicle is.";
-			id=3330;
-		};
-		class Item185
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4034.084,6.9255862,4149.8071};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=3332;
-			type="B_Truck_01_ammo_F";
+			title="Company Command";
+			id=4103;
 		};
 	};
 };
