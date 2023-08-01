@@ -13,7 +13,7 @@ class CfgFunctions
 // Misc settings
 disableChannels[] = {0,1,2,4,5,6};
 cmfDate = "30JUL2023";
-cmfVers = "CMF3 1.0.0";
+cmfVers = "CMF3 1.0.1";
 statTracking = true;
 
 // Includes for gear
