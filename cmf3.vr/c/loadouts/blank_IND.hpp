@@ -358,6 +358,8 @@ class cc: helicrew {// Crew Chief
 
 //Armor
 class vicc: Fic_Soldier_Carbine {// Crew
+  backpack[] = {CREW_BACKPACK};
+  vest[] = {CREW_VEST};
   uniform[] = {ARMOR_UNIFORM};
   headgear[] = {ARMOR_HEADGEAR};
   weapons[] = {SMG};
